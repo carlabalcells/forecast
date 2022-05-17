@@ -18,10 +18,9 @@ class HomeController extends Controller
         $forecast = [];
         $location = auth()->user()->location;
         
-        return view('forecast', [
-            'location' => $location,
-            'forecast' => $forecast
-        ]);
+        if(['middleware' => 'is.admin']) return redirect()->route('admin');       
+        else return redirect()->route('forecast.index', ['location' => auth()->user()->location]);
+
     }
      
 }
