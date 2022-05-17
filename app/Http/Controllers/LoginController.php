@@ -20,7 +20,7 @@ class LoginController extends Controller
             return back()->with('mensaje', 'Invalid credentials');
         }
 
-        if($request->username == 'admin') return redirect()->route('users.show');
+        if($request->username == 'admin') return redirect()->route('admin');
         else return redirect()->route('forecast.index', ['location' => auth()->user()->location]);
     }
 }

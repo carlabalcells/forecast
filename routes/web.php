@@ -41,5 +41,8 @@ Route::post('/forecast', [ForecastController::class, 'store'])->name('forecast.s
 Route::get('/forecast/{location}/{day}', [ForecastController::class, 'detail'])->name('forecast.detail');
 
 
-//Users List
-Route::get('/users', [UsersListController::class, 'index'])->name('users.show');
+//Admin Backend
+//Route::get('/admin', [UsersListController::class, 'index'])->name('admin');
+Route::group(['middleware' => 'is.admin'], function () {
+    Route::get('/admin', [UsersListController::class, 'index'])->name('admin');
+});

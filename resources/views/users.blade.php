@@ -10,9 +10,9 @@
         <table class="md:table-auto items-center">    
             <thead>
                 <tr>
-                    <th class="w-20">Username</th>
-                    <th class="w-20">Location</th>
-                    <th class="w-20">Sign Up Date</th>
+                    <th class="w-50">Username</th>
+                    <th class="w-50">Location</th>
+                    <th class="w-50">Sign Up Date</th>
                 </tr>
             </thead>
             <tbody>
