@@ -42,7 +42,6 @@ Route::get('/forecast/{location}/{day}', [ForecastController::class, 'detail'])-
 
 
 //Admin Backend
-//Route::get('/admin', [UsersListController::class, 'index'])->name('admin');
 Route::group(['middleware' => 'is.admin'], function () {
     Route::get('/admin', [UsersListController::class, 'index'])->name('admin');
 });
