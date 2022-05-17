@@ -26,14 +26,14 @@
         @if ($mode === 7)           
             <div class="grid md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-1 ">
         @else
-            <div class="">
+            <div class="grid grid-cols-1">
         @endif
             
                 @foreach ( $forecast as $f )
-                    <div class="md:w-12/12 bg-white shadow p-6 items-center justify-center">
+                    <div class="flex md:w-12/12 bg-white shadow p-6 items-center justify-center">
                         <a href="{{ route('forecast.detail', [ 'day' => date('j', $f->dt), 'location' => $location ] ) }} " >
-                            <span class="md:w-12/12 font-bold justify-center"> {{ date('D', $f->dt) }} </span><br>
-                            <span class="text-gray-500 justify-center"> {{ date('j M', $f->dt) }} </span><br>
+                            <span class="md:w-12/12 font-bold items-center justify-center"> {{ date('D', $f->dt) }} </span><br>
+                            <span class="text-gray-500 items-center justify-center"> {{ date('j M', $f->dt) }} </span><br>
                             <span> 
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 

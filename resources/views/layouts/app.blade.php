@@ -16,8 +16,8 @@
                
                 
                 @auth
-                <a href="{{ route('forecast.index', [ 'location' => auth()->user()->location ]) }}" class="text-3xl font-black">Forecast</a>
-                
+                <a href="{{ route('home') }}" class="text-3xl font-black">Forecast</a>
+               
                 <nav class="flex gap-2 items-center">
                     <a href="{{ route('profile.index') }}" class="font-bold text-gray-600 text-sm"> Welcome: 
                         <span class="font-normal"> {{ auth()->user()->username }} </span>
